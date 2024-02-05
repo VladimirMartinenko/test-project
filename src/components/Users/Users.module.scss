@@ -124,9 +124,26 @@
   content: attr(title);
   cursor: pointer;
 }
-.main>.div_main:nth-child(3n+1){
+.main_container>.container_user:nth-child(3n+1){
   margin-left: 0px;
 }
+@media (min-width:1170px) and (max-width: 2560px){
+  .div{
+    width: 1170px;
+  }
+}
+@media (min-width:1170px) and (max-width: 2560px){
+  .h1,.position,.a{
+    width: 330px;
+}
+}
+@media (min-width: 1170px) and (max-width: 2560px){
+  container_user{
+    width: 370px;
+    height: 254px;
+  }
+}
+
 
 @media (min-width:920px) and (max-width: 1170px){
   .container_user{

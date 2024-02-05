@@ -2,12 +2,6 @@ import React, { useEffect, useState } from 'react'
 import ClipLoader from 'react-spinners/ClipLoader'
 import style from './Users.module.scss'
 
-const override = {
-  // display: 'block',
-  // margin: '0 auto',
-  // borderColor: 'red'
-
-}
 
 const Users = ({ value }) => {
   const [values, setValues] = useState() //state of props

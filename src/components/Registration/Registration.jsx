@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Formik, Form, Field, ErrorMessage } from 'formik'
+import { Formik, Form, Field } from 'formik'
 import cx from 'classnames'
 import style from './Registration.module.scss'
 import { REGISTRATION_CHEMA } from '../../utils/validationSchemas'
@@ -44,7 +44,7 @@ const Registration = ({ onChange }) => {
 
   console.log(position)
   console.log(token)
-// create FormData vith initialValues
+  // create FormData vith initialValues
   const data = new FormData()
 
   const formData = values => {

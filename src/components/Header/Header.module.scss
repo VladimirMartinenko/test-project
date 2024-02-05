@@ -1,16 +1,26 @@
 .header{
   width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F8F8F8;
 }
 
 .nav{
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   width: 100vw;
   min-height: 60px;
+  background-color: #FFFFFF;
 }
-
+.nav_container{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .img {
   width: 104px;
   height: 26px;
@@ -41,4 +51,50 @@
 }
 .button:hover{
   background-color: #FFE302;
+}
+
+@media (min-width:1170px) and (max-width: 2560px){
+  .nav_container{
+    width: 1170px;
+  }
+}
+@media (min-width:1170px) and (max-width: 2560px){
+  .img {
+    padding-left: 0px;
+  }
+}
+@media (min-width:1170px) and (max-width: 2560px){
+  .container_button{
+    padding-right: 0px;
+  }
+}
+@media (min-width:920px) and (max-width: 1170px){
+  .img {
+    padding-left: 60px;
+  }
+}
+@media (min-width:920px) and (max-width: 1170px){
+  .container_button{
+    padding-right: 60px;
+  }
+}
+@media (min-width:440px) and (max-width: 920px){
+  .img {
+    padding-left: 32px;
+  }
+}
+@media (min-width:440px) and (max-width: 920px){
+  .container_button{
+    padding-right: 32px;
+  }
+}
+@media (min-width:440px) and (max-width: 920px){
+  .img {
+    padding-left: 16px;
+  }
+}
+@media (min-width:350px) and (max-width: 440px){
+  .container_button{
+    padding-right: 16px;
+  }
 }

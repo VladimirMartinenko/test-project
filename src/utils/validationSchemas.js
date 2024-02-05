@@ -6,8 +6,9 @@ export const REGISTRATION_CHEMA = yup.object({
     .email("Enter email")
     .matches(
       /^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,
-      "Not a valid email")
-      .required("Can't be empty"),
+      "Not a valid email"
+    )
+    .required("Can't be empty"),
   name: yup
     .string("Must be string")
     .min(2, "Must be longer than 2 characters")
@@ -15,10 +16,7 @@ export const REGISTRATION_CHEMA = yup.object({
     .required("Can't be empty"),
   phone: yup
     .string("Must be number")
-    .matches(
-      /^[\+]{0,1}380([0-9]{9})$/,
-      "Not a valid number"
-    )
+    .matches(/^[\+]{0,1}380([0-9]{9})$/, "Not a valid number")
     .required("Can't be empty"),
-    photo: yup.string().required("Can't be empty"),
+  photo: yup.string().required("Can't be empty"),
 });
