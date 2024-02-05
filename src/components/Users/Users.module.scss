@@ -1,0 +1,186 @@
+.contents{
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 400;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+}
+.container_user{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 370px;
+  height: 254px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-top: 29px;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  margin-left: 20px;
+}
+.circle_image{
+  display: inline-block;
+  overflow: hidden;
+  width: 22%;
+  padding-bottom: 22%;
+  height: 0;
+  position: relative;
+}
+.img{
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 110px;
+}
+.position{
+  margin: 0px;
+  width: 330px;
+  text-align: center;
+  overflow: hidden;
+  white-space:nowrap ;
+  text-overflow:ellipsis;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+}
+.main_container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  
+}
+.button {
+  margin-top: 40px;
+  width: 100px;
+  min-height: 34px;
+  border: 1px solid transparent;
+  border-radius: 80px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  background-color: #F4E041;
+  margin-left: 10px;
+  cursor: pointer;
+
+}
+.button2 {
+  margin-top: 40px;
+  width: 120px;
+  min-height: 34px;
+  border: 1px solid transparent;
+  border-radius: 80px;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  background-color: grey;
+  margin-left: 10px;
+
+}
+.button:hover{
+  background-color: #FFE302;
+}
+.h1{
+  width: 330px;
+  box-sizing: border-box;
+  // padding: 20px 0px 20px 0px;
+  margin: 20px 0px 20px 0px;;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+  overflow: hidden;
+  white-space:nowrap ;
+  text-overflow:ellipsis;
+  text-align: center;
+}
+.a{
+  margin: 0px;
+  width: 330px;
+  text-align: center;
+  overflow: hidden;
+  white-space:nowrap ;
+  text-overflow:ellipsis;
+  font-size: 16px;
+  font-family: 'Nunito', sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+}
+.a:hover{
+  content: attr(title);
+  cursor: pointer;
+}
+.main>.div_main:nth-child(3n+1){
+  margin-left: 0px;
+}
+
+@media (min-width:920px) and (max-width: 1170px){
+  .container_user{
+    width: 282px;
+    height: 254px;
+  }
+}
+@media (min-width:920px) and (max-width: 1170px){
+  .h1,.position,.a{
+    width: 242px;
+  }
+}
+@media (min-width:920px) and (max-width: 1170px){
+.circle_image{
+  width: 30%;
+  padding-bottom: 30%;
+}
+}
+
+
+@media (min-width:440px) and (max-width: 920px){
+  .container_user{
+    width: 344px;
+    height: 254px;
+    margin-left: 16px;
+    margin-top: 16px;
+  }
+}
+@media (min-width:440px) and (max-width: 920px){
+  .h1,.position,.a{
+    width: 304px;
+}}
+@media (min-width:440px) and (max-width: 920px){
+  .circle_image{
+    width: 25%;
+  }
+}
+
+
+@media (min-width:350px) and (max-width: 440px){
+  .container_user{
+    width: 328px;
+    height: 254px;
+    margin-left: 0px;
+  }
+}
+@media (min-width:350px) and (max-width: 440px){
+  .h1,.position,.a{
+    width: 288px;}
+}
+
+@media (min-width:350px) and (max-width: 440px){
+  .circle_image{
+    width: 25%;
+    padding-bottom: 25%;
+  }
+}
