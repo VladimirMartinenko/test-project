@@ -1,11 +1,22 @@
 import React, { useEffect, useState } from 'react'
+import ClipLoader from 'react-spinners/ClipLoader'
 import style from './Users.module.scss'
+
+const override = {
+  // display: 'block',
+  // margin: '0 auto',
+  // borderColor: 'red'
+
+}
 
 const Users = ({ value }) => {
   const [values, setValues] = useState() //state of props
   const [items, setItems] = useState([]) //state of array users
   const [page, setPage] = useState(1) // state of page
-  const [data, setData] = useState(null) // object user
+  const [data, setData] = useState() // object user
+  const [isLoading,setIsLoading] = useState(true) // spinner
+
+
 
   //put props in state
   useEffect(() => {
@@ -21,14 +32,14 @@ const Users = ({ value }) => {
       `https://frontend-test-assignment-api.abz.agency/api/v1/users?page=${page}&count=6`
     )
       .then(res => res.json())
-      .then(data => addItems(data))
+      .then(data => {addItems(data); setIsLoading(false) })
   }, [page, values])
 
   // put users next page in array with users
   const addItems = data => {
     setData(data)
-    console.log(data)
     setItems(items.concat(data.users))
+    setIsLoading(false)
   }
 
   return (
@@ -49,10 +60,12 @@ const Users = ({ value }) => {
           </div>
         ))}
       </div>
+      <ClipLoader color='#00BDD3' cssOverride={{color:'#F8F8F8',marginTop:'20px'}} loading={isLoading}  size={50}/>
+
       {data && data.links.next_url !== null ? (
         <button
           className={style.button}
-          onClick={() => setPage(+page + 1)} //can put link from next page(data.links.next_url)
+          onClick={() => {setPage(+page + 1); setIsLoading(true)}} //can put link from next page(data.links.next_url)
         >
           show more
         </button>

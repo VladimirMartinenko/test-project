@@ -3,7 +3,9 @@ import TestTask from './pages/TestTask';
 
 function App() {
   return (
-    <div><TestTask></TestTask></div>
+    <div>
+      <TestTask/>
+    </div>
   );
 }
 
