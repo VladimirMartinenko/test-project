@@ -27,6 +27,7 @@ const Users = ({ value }) => {
     )
       .then(res => res.json())
       .then(data => {addItems(data); setIsLoading(false) })
+      .catch(error => console.log(error))
   }, [page, values])
 
   // put users next page in array with users
@@ -61,7 +62,7 @@ const Users = ({ value }) => {
           className={style.button}
           onClick={() => {setPage(+page + 1); setIsLoading(true)}} //can put link from next page(data.links.next_url)
         >
-          show more
+          Show more
         </button>
       ) : (
         <button className={style.button2}>show more</button>
