@@ -169,10 +169,15 @@
   justify-content: center;
 }
 .success_h1{
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
   font-size: 40px;
-  font-family: 'Nunito', sans-serif;
+  line-height: 40px;
   font-weight: 400;
-  line-height: 26px;
+  font-family: 'Nunito', sans-serif;
+  text-align: center;
+  margin: 0px;
 }
 
 .error_registration{
